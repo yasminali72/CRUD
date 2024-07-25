@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<body>
+    <div class="container py-5">
+        <div class="form-floating mb-3">
+            <input oninput="validationProduct(this)" type="text" class="form-control" id="ProductName" placeholder="name@example.com">
+            <label for="ProductName">Product Name</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input oninput="validationProduct(this)" type="number" class="form-control" id="ProductPrice" placeholder="name@example.com">
+            <label for="ProductPrice">Product Price</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input oninput="validationProduct(this)" type="text" class="form-control" id="ProductDes" placeholder="name@example.com">
+            <label for="ProductDes">Product Des</label>
+          </div>
+          
+          <div class="form-floating mb-3">
+            <input oninput="validationProduct(this)" list="Products" type="text" class="form-control" id="ProductCategory" placeholder="name@example.com">
+            <label for="ProductCategory">Product Category</label>
+
+            <datalist id="Products">
+              <option value="Tv">
+                <option value="mobile">
+                  <option value="screen">
+                    <option value="laptop">
+                  
+            </datalist>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="file" accept="image/*"  class="form-control" id="ProductImage" placeholder="name@example.com">
+            <label for="ProductImage">Product Image</label>
+          </div>
+
+         
+          <button type="button" class="btn btn-primary" onclick="addProduct()">Add Product</button>
+
+    
+    </div>
+
+      <input type="text" class="form-control w-50 m-auto mb-5 bg-light" oninput="search()" id="ProductSearch" placeholder="ProductSearch">
+   
+
+<div class="container">
+  <div class="row" id="demo">
+
+  </div>
+</div>
+
+
+
+
+
+    <script src="js/index.js"></script>
+</body>
+</html>
